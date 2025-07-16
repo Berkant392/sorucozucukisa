@@ -1,0 +1,31 @@
+# netlify.toml
+# Bu dosya, Netlify'ın sitenizi derleme ve dağıtma şeklini yapılandırır.
+
+[build]
+  # Uygulamanızın derleme çıktılarının bulunduğu dizin.
+  # index.html dosyanızın bulunduğu yer burasıdır.
+  publish = "public"
+
+  # Uygulamanızı derlemek için çalıştırılacak komut.
+  # Bu örnekte, tek bir HTML dosyası olduğu için özel bir derleme komutuna gerek yok.
+  # Eğer React/Vue/Angular gibi bir framework kullanıyorsanız, buraya `npm run build` gibi bir komut yazardınız.
+  command = ""
+
+[functions]
+  # Netlify Function'larınızın bulunduğu dizin.
+  # Bu, netlify/functions/gemini-proxy.js dosyasının konumunu belirtir.
+  directory = "netlify/functions"
+
+# Yeniden yönlendirme kuralları (isteğe bağlı)
+# Eğer uygulamanızda SPA (Tek Sayfa Uygulaması) yönlendirmesi varsa veya
+# belirli yolları başka yerlere yönlendirmek isterseniz kullanabilirsiniz.
+# Örneğin, tüm bilinmeyen yolları index.html'e yönlendirmek için:
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
+
+# Ortam değişkenleri (isteğe bağlı, ancak hassas anahtarlar için Netlify UI daha güvenlidir)
+# Buraya doğrudan API anahtarları eklemeyin. Bunun yerine Netlify UI'ını kullanın.
+# [build.environment]
+#   GEMINI_API_KEY = "buraya-anahtarınızı-yazmayın-netlify-ui-kullanın"
