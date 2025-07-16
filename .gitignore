@@ -1,0 +1,19 @@
+# Node.js bağımlılıkları
+node_modules/
+
+# Ortam değişkenleri dosyası (yerel geliştirme için)
+.env
+
+# Netlify Function'lar için olası geçici dosyalar veya derleme çıktıları
+.netlify/
+
+# İşletim sistemi veya IDE tarafından oluşturulan dosyalar
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Derleme çıktıları (eğer bir build süreci varsa ve public/ dışında bir yere çıktı veriyorsa)
+dist/
+build/
